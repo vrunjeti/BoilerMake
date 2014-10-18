@@ -1,0 +1,53 @@
+{
+	"user" :
+	{
+		"mosab" : 
+		{
+ 			"flavor" :
+			{
+				"spicy" : 0,
+				"sweet" : 0,
+				"sour"	: 0,
+				"bitter": 0,
+				"fruity": 0,
+				"tart"	: 0,
+				"salty"	: 0,
+				"buttery": 0,
+				"pickled": 0,
+				"unseasoned": 0
+			},
+
+			"texture" :
+			{
+				"crunchy": 0,
+				"soft": 0,
+				"savory": 0,
+				"raw": 0,
+				"cooked": 0,
+				"juicy": 0,
+				"smoked": 0,
+				"sauteed": 0,
+				"watery": 0
+			},
+			
+			"allergy" :
+			{
+				"beef": true,
+				"pork": true,
+				"shellfish": true,
+				"fish": true,
+				"peanuts": true,
+				"tree nuts": true,
+				"milk": true,
+				"soy": true,
+				"wheat": true
+			} 	
+		}
+	},
+
+	"restaurant" :
+	{
+		" "
+	}
+
+}
