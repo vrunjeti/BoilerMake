@@ -8,10 +8,10 @@
 				"spicy" : 0,
 				"sweet" : 0,
 				"sour"	: 0,
+				"salty"	: 0,
 				"bitter": 0,
 				"fruity": 0,
 				"tart"	: 0,
-				"salty"	: 0,
 				"buttery": 0,
 				"pickled": 0,
 				"unseasoned": 0
@@ -32,22 +32,75 @@
 			
 			"allergy" :
 			{
-				"beef": true,
-				"pork": true,
-				"shellfish": true,
-				"fish": true,
-				"peanuts": true,
-				"tree nuts": true,
-				"milk": true,
-				"soy": true,
-				"wheat": true
+				"beef": false,
+				"pork": false,
+				"shellfish": false,
+				"fish": false,
+				"peanuts": false,
+				"tree nuts": false,
+				"milk": false,
+				"soy": false,
+				"wheat": false
 			} 	
 		}
 	},
 
 	"restaurant" :
 	{
-		" "
-	}
+		"Woochon" :
+		{
+			"property" :
+			{
+				"ethnic": "Korean",
+				"lat": -34.397,
+				"long": 150.644
+			},
+			
+			"menu" :
+			{
+				"placeholder" :
+				{
+					"flavor" : 
+					{
+						"spicy" : false,
+						"sweet" : false,
+						"sour"	: false,
+						"salty"	: false,
+						"fruity": false,
+						"tart"	: false,
+						"bitter": false,
+						"buttery": false,
+						"pickled": false,
+						"unseasoned": false
+					},
 
+					"texture" : 
+					{
+						"crunchy": false,
+						"soft": false,
+						"savory": false,
+						"raw": false,
+						"cooked": false,
+						"juicy": false,
+						"smoked": false,
+						"sauteed": false,
+						"watery": false
+					},
+
+					"allergy" :
+					{
+						"beef": false,
+						"pork": false,
+						"shellfish": false,
+						"fish": false,
+						"peanuts": false,
+						"tree nuts": false,
+						"milk": false,
+						"soy": false,
+						"wheat": false
+					}
+				}
+			}
+		}
+	}
 }
