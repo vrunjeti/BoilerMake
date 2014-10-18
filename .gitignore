@@ -1,0 +1,3 @@
+# don't add these files
+
+WaiterPlease/node_modules/*
