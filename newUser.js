@@ -52,5 +52,9 @@ if ($("#pickled").prop( "checked" ))
 if ($("#unseasoned").prop( "checked" ))
 	refuser.flavor.unseasoned.update(3);
 
-
+ /*
+ 	Assign a score to each food item based on the user preference
+ 	Score is calculuated based on user preference
+ 	Score = (Quality_1_user)*(Quality_1_fooditem) + (Quality_2_user)*(Quality_2_fooditem) + ... (Quality_n_user)*(Quality_n_fooditem)
+  */
 
