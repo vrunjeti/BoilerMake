@@ -2,9 +2,9 @@
 // we could also read the profile to see if it's null
 // here we will just simulate this with an isNewUser boolean
 
-var ref = new Firebase("https://waiter-please.firebaseio.com");
-var refuser = new Firebase("https://waiter-please.firebaseio.com/user/mosab");
-var refrest = new Firebase("https://waiter-please.firebaseio.com/restaurant");
+var ref = new Firebase("https://torid-fire-430.firebaseio.com/");
+var refuser = new Firebase("https://torid-fire-430.firebaseio.com/user/mosab");
+var refrest = new Firebase("https://torid-fire-430.firebaseio.com/restaurant");
 
 
 
