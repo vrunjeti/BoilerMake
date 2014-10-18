@@ -26,9 +26,10 @@ ref.onAuth(function(authData) {
 
 });
 */
+console.log(refuser.flavor[0])
 
 if ($("#spicy").prop( "checked" ))
-	refuser.child.spicy.update(3);
+	refuser.flavor.spicy.update(3);
 
 if ($("#sweet").prop( "checked" ))
 	refuser.flavor.sweet.update(3);
@@ -65,5 +66,6 @@ if ($("#unseasoned").prop( "checked" ))
  			 .2*(texture_1_user)*(texture_1_fooditem) +...+(texture_n_user)*(texture_n_fooditem) ]
   */
  
+
 
 

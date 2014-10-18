@@ -51,9 +51,9 @@
 		{
 			"property" :
 			{
-				"ethnic": "Korean",
-				"lat": -34.397,
-				"long": 150.644
+				"ethnic": "default",
+				"lat": 0,
+				"long": 0
 			},
 			
 			"menu" :
