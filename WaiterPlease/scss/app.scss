@@ -40,7 +40,7 @@
 //   "foundation/components/visibility";
 
 nav{
-	padding: auto 0px;
+	padding: 0;
 	h1{
 		text-align: center;
 		color: #fff;
@@ -48,15 +48,23 @@ nav{
 	}
 }
 
+
+
 body{
 	$dred: #b0120a;
 	$coral: #e64a19;
 	//background: scale-color($dred, $lightness: -10%);
 	background: #fafafa;
 	text-align: center;
-	h2{
+	h1, h2{
 		//color: scale-color(#fff, $lightness: -20%);
-		color: #888;
+		color: #999;
+		font-family: Oswald;
+	}
+	nav h1 {
+		color: #fafafa;
+		font-family: Lobster;
+		font-size: 32px;
 	}
 }
 
@@ -67,10 +75,10 @@ body{
 
 .intro{
 	text-align: center;
-	h2{
-		color: scale-color(#fff, $lightness: -20%);	
-	}
-	
+}
+
+.button{
+	border-radius: 5px;
 }
 
 .button.active {

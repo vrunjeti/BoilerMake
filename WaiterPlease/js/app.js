@@ -176,10 +176,17 @@ $('#allergiesnext').click(function(){
 	$('.prefallergies').fadeOut(400, function(){$('.location').fadeIn()});
 });
 
+// var restaurantList = document.getElementByClassName("location");
+// //var restaurantList = $('.location');
+// for(var )
+// restaurantList.getElementsByTagName("P")[i].innerHTML;
 
+// var restaurantName = "";
 
-var restaurantName = "" + "!";
-$('#welc').append(restaurantName);
+// if($('.location #' + ).hasClass('active')) restaurantName = 
+
+var restaurantName = "WooChon";
+$('#welc').append(restaurantName + "!");
 
 $('#locationnext').click(function(){
 	$('.location').fadeOut(400, function(){$('.welcome').fadeIn()});
