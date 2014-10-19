@@ -142,6 +142,7 @@ var formula = function(username, menu){
 		}
 	}
 	console.log(finalresult);
+	return finalresult;
 }
 
 var filteredformula = function(username, menu){
@@ -165,6 +166,12 @@ var filteredformula = function(username, menu){
 	});
 
 	// console.log(uflavor);
+
+	index = -1;
+	Object.keys(username.flavor).forEach(function(flava){
+		index++;
+		uflavor[index] = username.flavor[flava];
+	});
 
 	var results = [];
 
