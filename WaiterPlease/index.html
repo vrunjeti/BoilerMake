@@ -6,6 +6,8 @@
     <title>Waiter Please</title>
     <link rel="stylesheet" href="css/app.css" />
     <script src="bower_components/modernizr/modernizr.js"></script>
+    <script src="https://cdn.firebase.com/js/client/1.1.2/firebase.js"></script>
+
   </head>
   <body>
     
@@ -32,46 +34,46 @@
       
       <div class="row">
         <div class="column small-6">
-          <p class="button expand">Spicy</p>
+          <p class="button expand" data-attribute="spicy">Spicy</p>
         </div>
         <div class="column small-6">
-          <p class="button expand">Sweet</p>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="column small-6">
-          <p class="button expand">Sour</p>
-        </div>
-        <div class="column small-6">
-          <p class="button expand">Salty</p>
+          <p class="button expand" data-attribute="sweet">Sweet</p>
         </div>
       </div>
 
       <div class="row">
         <div class="column small-6">
-          <p class="button expand">Fruity</p>
+          <p class="button expand" data-attribute="sour">Sour</p>
         </div>
         <div class="column small-6">
-          <p class="button expand">Tart</p>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="column small-6">
-          <p class="button expand">Bitter</p>
-        </div>
-        <div class="column small-6">
-          <p class="button expand">Buttery</p>
+          <p class="button expand" data-attribute="salty">Salty</p>
         </div>
       </div>
 
       <div class="row">
         <div class="column small-6">
-          <p class="button expand">Pickled</p>
+          <p class="button expand" data-attribute="fruity">Fruity</p>
         </div>
         <div class="column small-6">
-          <p class="button expand">Unseasoned</p>
+          <p class="button expand" data-attribute="tart">Tart</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="column small-6">
+          <p class="button expand" data-attribute="bitter">Bitter</p>
+        </div>
+        <div class="column small-6">
+          <p class="button expand" data-attribute="buttery">Buttery</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="column small-6">
+          <p class="button expand" data-attribute="pickled">Pickled</p>
+        </div>
+        <div class="column small-6">
+          <p class="button expand" data-attribute="unseasoned">Unseasoned</p>
         </div>
       </div>
 
@@ -84,46 +86,46 @@
 
       <div class="row">
         <div class="column small-6">
-          <p class="button expand">Beef</p>
+          <p class="button expand" data-attribute="beef">Beef</p>
         </div>
         <div class="column small-6">
-          <p class="button expand">Pork</p>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="column small-6">
-          <p class="button expand">Chicken</p>
-        </div>
-        <div class="column small-6">
-          <p class="button expand">Fish</p>
+          <p class="button expand" data-attribute="pork">Pork</p>
         </div>
       </div>
 
       <div class="row">
         <div class="column small-6">
-          <p class="button expand">Shellfish</p>
+          <p class="button expand" data-attribute="chicken">Chicken</p>
         </div>
         <div class="column small-6">
-          <p class="button expand">Peanuts</p>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="column small-6">
-          <p class="button expand">Tree Nuts</p>
-        </div>
-        <div class="column small-6">
-          <p class="button expand">Milk</p>
+          <p class="button expand" data-attribute="fish">Fish</p>
         </div>
       </div>
 
       <div class="row">
         <div class="column small-6">
-          <p class="button expand">Soy</p>
+          <p class="button expand" data-attribute="shellfish">Shellfish</p>
         </div>
         <div class="column small-6">
-          <p class="button expand">Wheat</p>
+          <p class="button expand" data-attribute="peanuts">Peanuts</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="column small-6">
+          <p class="button expand" data-attribute="treenuts">Tree Nuts</p>
+        </div>
+        <div class="column small-6">
+          <p class="button expand" data-attribute="milk">Milk</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="column small-6">
+          <p class="button expand" data-attribute="soy">Soy</p>
+        </div>
+        <div class="column small-6">
+          <p class="button expand" data-attribute="wheat">Wheat</p>
         </div>
       </div>
 
@@ -162,9 +164,10 @@
     <div class="rest4">
       
     </div>
-
+    
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/foundation/js/foundation.min.js"></script>
     <script src="js/app.js"></script>
+
   </body>
 </html>
