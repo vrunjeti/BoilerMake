@@ -73,12 +73,7 @@ body{
 	
 }
 
-.prefflavors .button.active {
-	background: scale-color($coral, $lightness: 25%);
-	border: 1px solid #555;
-}
-
-.prefallergies .button.active {
+.button.active {
 	background: scale-color($coral, $lightness: 50%);
 	border: 1px solid #555;
 }

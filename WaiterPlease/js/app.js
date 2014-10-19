@@ -46,14 +46,16 @@ console.log(menu);
 // var 
 var results = [];
 
-Object.keys(menu).forEach(function(menuitem)
-{
-	Object.keys(menuitem).forEach(function(properties){
-	{
-		Object.keys(properties).forEach()
-		results.push()
-	})
-});
+}
+
+// Object.keys(menu).forEach(function(menuitem)
+// {
+// 	Object.keys(menuitem).forEach(function(properties){
+// 	{
+// 		Object.keys(properties).forEach()
+// 		results.push()
+// 	})
+// });
 
 // 	for(var i = 0; i < Object.keys(menu).length; i++)								//iterate through each menu item
 // 	{ 	
@@ -125,6 +127,18 @@ Object.keys(menu).forEach(function(menuitem)
 // 	return [first[1],second[1],third[1]];
 // }
 
+var lat = 0;
+var lon = 0;
+
+function success(pos){
+	//var coords = pos.coords;
+	lat = pos.latitude;
+	lon = pos.longitude;
+}
+
+var position = navigator.geolocation.getCurrentPosition(success);
+//console.log(position);
+
 $('#introgo').click(function(){
 	//$('.homepage').addClass('hide');
 	$('.homepage').fadeOut(400, function(){$('.prefflavors').fadeIn()});
@@ -135,32 +149,44 @@ $('#introgo').click(function(){
 
 $('#flavorsnext').click(function(){
 	$('.prefflavors').fadeOut(400, function(){$('.prefallergies').fadeIn()});
-	//$('.prefflavors').addClass('hide');
-	//$('.prefallergies').removeClass('hide');
 });
 
 $('#allergiesnext').click(function(){
 	$('.prefallergies').fadeOut(400, function(){$('.location').fadeIn()});
-	//$('.prefallergies').addClass('hide');
-	//$('.location').removeClass('hide');
+});
+
+
+
+var restaurantName = "" + "!";
+$('#welc').append(restaurantName);
+
+$('#locationnext').click(function(){
+	$('.location').fadeOut(400, function(){$('.welcome').fadeIn()});
+});
+
+$('#welcomenext').click(function(){
+	$('.welcome').fadeOut(400, function(){$('.rest1').fadeIn()});
+});
+
+$('#rest1next').click(function(){
+	$('.rest1').fadeOut(400, function(){$('.rest2').fadeIn()});
+});
+
+$('#rest2next').click(function(){
+	$('.rest2').fadeOut(400, function(){$('.rest3').fadeIn()});
+});
+
+$('#rest3next').click(function(){
+	$('.rest3').fadeOut(400, function(){$('.rest4').fadeIn()});
+});
+
+$('#rest4next').click(function(){
+	$('.rest4').fadeOut(400, function(){$('.').fadeIn()});
 });
 
 $(' .button').click(function(){
-	//alert($(this).css('background-color'));
 	if(!$(this).hasClass('active')){
 		$(this).addClass('active');
-		//alert($(this).css('background-color'));
-	}
-	else {
-		$(this).removeClass('active');
-	}
-});
-
-$('.prefallergies .button').click(function(){
-	//alert($(this).css('background-color'));
-	if(!$(this).hasClass('active')){
-		$(this).addClass('active');
-		//alert($(this).css('background-color'));
 	}
 	else {
 		$(this).removeClass('active');
