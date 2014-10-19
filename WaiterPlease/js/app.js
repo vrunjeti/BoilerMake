@@ -158,6 +158,15 @@ function updateFlavor(fl){
 	}
 }
 
+function updateAllergy(al){
+	if($('#' + al).hasClass('active')){
+		refuser.child('allergy').child(al).set(0);
+	}
+	else {
+		refuser.child('allergy').child(al).set(1);
+	}
+}
+
 $('#flavorsnext').click(function(){
 	$('.prefflavors').fadeOut(400, function(){$('.prefallergies').fadeIn()});
 	//if buttons are active, set those to fb
