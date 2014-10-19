@@ -33,7 +33,12 @@
           "texture" : {
             "noodles" : 0,
             "rice" : 0,
-            "stew" : 1
+            "stew" : 1,
+            "meat" : 0,
+            "seafood" : 0,
+            "vegetarian" : 0,
+            "strong" : 0,
+            "mild" : 0
           }
         },
         "Ahl Jigae" : {
@@ -67,7 +72,12 @@
           "texture" : {
             "noodles" : 0,
             "rice" : 0,
-            "stew" : 1
+            "stew" : 1,
+            "meat" : 0,
+            "seafood" : 0,
+            "vegetarian" : 0,
+            "strong" : 0,
+            "mild" : 0
           }
         },
         "Bi Bim Naeng Myun" : {
@@ -101,7 +111,12 @@
           "texture" : {
             "noodles" : 1,
             "rice" : 0,
-            "stew" : 0
+            "stew" : 0,
+            "meat" : 0,
+            "seafood" : 0,
+            "vegetarian" : 0,
+            "strong" : 0,
+            "mild" : 0
           }
         },
         "Dae Goo Tang" : {
@@ -135,7 +150,12 @@
           "texture" : {
             "noodles" : 0,
             "rice" : 0,
-            "stew" : 1
+            "stew" : 1,
+            "meat" : 0,
+            "seafood" : 0,
+            "vegetarian" : 0,
+            "strong" : 0,
+            "mild" : 0
           }
         },
         "Dak Do Ri Tang" : {
@@ -169,7 +189,12 @@
           "texture" : {
             "noodles" : 0,
             "rice" : 0,
-            "stew" : 1
+            "stew" : 1,
+            "meat" : 0,
+            "seafood" : 0,
+            "vegetarian" : 0,
+            "strong" : 0,
+            "mild" : 0
           }
         },
         "Doinjang Jigae" : {
@@ -203,7 +228,12 @@
           "texture" : {
             "noodles" : 0,
             "rice" : 0,
-            "stew" : 1
+            "stew" : 1,
+            "meat" : 0,
+            "seafood" : 0,
+            "vegetarian" : 0,
+            "strong" : 0,
+            "mild" : 0
           }
         },
         "Dol Sot Bi Bim Bap" : {
@@ -237,7 +267,12 @@
           "texture" : {
             "noodles" : 0,
             "rice" : 1,
-            "stew" : 0
+            "stew" : 0,
+            "meat" : 0,
+            "seafood" : 0,
+            "vegetarian" : 0,
+            "strong" : 0,
+            "mild" : 0
           }
         },
         "Duk Mandoo Gook" : {
@@ -271,7 +306,12 @@
           "texture" : {
             "noodles" : 0,
             "rice" : 0,
-            "stew" : 1
+            "stew" : 1,
+            "meat" : 0,
+            "seafood" : 0,
+            "vegetarian" : 0,
+            "strong" : 0,
+            "mild" : 0
           }
         },
         "Gal Bi Gui" : {
@@ -305,7 +345,12 @@
           "texture" : {
             "noodles" : 0,
             "rice" : 1,
-            "stew" : 0
+            "stew" : 0,
+            "meat" : 0,
+            "seafood" : 0,
+            "vegetarian" : 0,
+            "strong" : 0,
+            "mild" : 0
           }
         },
         "Gal Bi Tang" : {
@@ -339,7 +384,12 @@
           "texture" : {
             "noodles" : 0,
             "rice" : 0,
-            "stew" : 1
+            "stew" : 1,
+            "meat" : 0,
+            "seafood" : 0,
+            "vegetarian" : 0,
+            "strong" : 0,
+            "mild" : 0
           }
         },
         "Go Dung Uh Gui" : {
@@ -373,7 +423,12 @@
           "texture" : {
             "noodles" : 0,
             "rice" : 1,
-            "stew" : 0
+            "stew" : 0,
+            "meat" : 0,
+            "seafood" : 0,
+            "vegetarian" : 0,
+            "strong" : 0,
+            "mild" : 0
           }
         },
         "Hae Mool Jeon Gol" : {
@@ -407,7 +462,12 @@
           "texture" : {
             "noodles" : 0,
             "rice" : 1,
-            "stew" : 0
+            "stew" : 0,
+            "meat" : 0,
+            "seafood" : 0,
+            "vegetarian" : 0,
+            "strong" : 0,
+            "mild" : 0
           }
         },
         "Hoi Naeng Myun" : {
@@ -441,7 +501,12 @@
           "texture" : {
             "noodles" : 1,
             "rice" : 0,
-            "stew" : 0
+            "stew" : 0,
+            "meat" : 0,
+            "seafood" : 0,
+            "vegetarian" : 0,
+            "strong" : 0,
+            "mild" : 0
           }
         },
         "Jap Chae " : {
@@ -475,7 +540,12 @@
           "texture" : {
             "noodles" : 1,
             "rice" : 0,
-            "stew" : 0
+            "stew" : 0,
+            "meat" : 0,
+            "seafood" : 0,
+            "vegetarian" : 0,
+            "strong" : 0,
+            "mild" : 0
           }
         },
         "Johki" : {
@@ -509,7 +579,12 @@
           "texture" : {
             "noodles" : 0,
             "rice" : 1,
-            "stew" : 0
+            "stew" : 0,
+            "meat" : 0,
+            "seafood" : 0,
+            "vegetarian" : 0,
+            "strong" : 0,
+            "mild" : 0
           }
         },
         "Kalgooksoo" : {
@@ -543,7 +618,12 @@
           "texture" : {
             "noodles" : 1,
             "rice" : 0,
-            "stew" : 0
+            "stew" : 0,
+            "meat" : 0,
+            "seafood" : 0,
+            "vegetarian" : 0,
+            "strong" : 0,
+            "mild" : 0
           }
         },
         "Kam Ja Tang" : {
@@ -577,7 +657,12 @@
           "texture" : {
             "noodles" : 0,
             "rice" : 0,
-            "stew" : 1
+            "stew" : 1,
+            "meat" : 0,
+            "seafood" : 0,
+            "vegetarian" : 0,
+            "strong" : 0,
+            "mild" : 0
           }
         },
         "Kimchee Jigae" : {
@@ -611,7 +696,12 @@
           "texture" : {
             "noodles" : 0,
             "rice" : 0,
-            "stew" : 1
+            "stew" : 1,
+            "meat" : 0,
+            "seafood" : 0,
+            "vegetarian" : 0,
+            "strong" : 0,
+            "mild" : 0
           }
         },
         "Soon Tofu" : {
@@ -645,7 +735,12 @@
           "texture" : {
             "noodles" : 0,
             "rice" : 0,
-            "stew" : 1
+            "stew" : 1,
+            "meat" : 0,
+            "seafood" : 0,
+            "vegetarian" : 0,
+            "strong" : 0,
+            "mild" : 0
           }
         },
         "Sul Lang Tang" : {
@@ -679,7 +774,12 @@
           "texture" : {
             "noodles" : 0,
             "rice" : 0,
-            "stew" : 1
+            "stew" : 1,
+            "meat" : 0,
+            "seafood" : 0,
+            "vegetarian" : 0,
+            "strong" : 0,
+            "mild" : 0
           }
         },
         "Taro Gook Bap" : {
@@ -713,7 +813,12 @@
           "texture" : {
             "noodles" : 0,
             "rice" : 0,
-            "stew" : 1
+            "stew" : 1,
+            "meat" : 0,
+            "seafood" : 0,
+            "vegetarian" : 0,
+            "strong" : 0,
+            "mild" : 0
           }
         },
         "Yook Jae Jang" : {
@@ -747,7 +852,12 @@
           "texture" : {
             "noodles" : 0,
             "rice" : 0,
-            "stew" : 1
+            "stew" : 1,
+            "meat" : 0,
+            "seafood" : 0,
+            "vegetarian" : 0,
+            "strong" : 0,
+            "mild" : 0
           }
         },
         "Youm So Tang" : {
@@ -781,7 +891,12 @@
           "texture" : {
             "noodles" : 0,
             "rice" : 0,
-            "stew" : 1
+            "stew" : 1,
+            "meat" : 0,
+            "seafood" : 0,
+            "vegetarian" : 0,
+            "strong" : 0,
+            "mild" : 0
           }
         }
       },
@@ -824,7 +939,12 @@
           "texture" : {
             "noodles" : 0,
             "rice" : 0,
-            "stew" : 0
+            "stew" : 0,
+            "meat" : 0,
+            "seafood" : 0,
+            "vegetarian" : 0,
+            "strong" : 0,
+            "mild" : 0
           }
         }
       },
@@ -867,8 +987,12 @@
       "texture" : {
         "noodles" : 0,
         "rice" : 0,
-        "stew" : 0
-      }
+        "stew" : 0,
+        "meat" : 0,
+        "seafood" : 0,
+        "vegetarian" : 0,
+        "strong" : 0,
+        "mild" : 0    }
     }
   }
 }
