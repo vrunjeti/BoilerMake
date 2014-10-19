@@ -141,7 +141,7 @@ $coral: #e64a19;
 // $last-child-float: $opposite-direction;
 
 // We use these to make sure border radius matches unless we want it different.
-// $global-radius: 3px;
+$global-radius: 3px;
 // $global-rounded: 1000px;
 
 // We use these to control inset shadow shiny edges and depressions.
@@ -446,8 +446,8 @@ $coral: #e64a19;
 // $button-function-factor: -20%;
 
 // We use these to control button border and hover styles.
-// $button-border-width: 0px;
-// $button-border-style: solid;
+$button-border-width: 1px;
+$button-border-style: solid #fafafa;
 $button-bg-color: $coral;
 // $button-bg-hover: scale-color($button-bg-color, $lightness: $button-function-factor);
 // $button-border-color: $button-bg-hover;
@@ -459,7 +459,7 @@ $button-bg-color: $coral;
 // $alert-button-border-color: $alert-button-bg-hover;
 
 // We use this to set the default radius used throughout the core.
-// $button-radius: $global-radius;
+$button-radius: 10px;
 // $button-round: $global-rounded;
 
 // We use this to set default opacity and cursor for disabled buttons.
@@ -1366,7 +1366,7 @@ $topbar-bg-color: $coral;
 // $topbar-bg: $topbar-bg-color;
 
 // Height and margin
-// $topbar-height: 45px;
+$topbar-height: 50px;
 // $topbar-margin-bottom: 0;
 
 // Controlling the styles for the title in the top bar

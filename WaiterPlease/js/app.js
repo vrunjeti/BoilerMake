@@ -264,6 +264,20 @@ var filteredformula = function(username, menu){
 	console.log(finalresult);
 }
 
+var lat = 0;
+var lon = 0;
+
+function success(pos){
+	//var coords = pos.coords;
+	lat = pos.latitude;
+	lon = pos.longitude;
+}
+
+//alert("lat = " + lat + " lon = " + lon);
+
+var position = navigator.geolocation.getCurrentPosition(success);
+//console.log(position);
+
 $('#introgo').click(function(){
 	//$('.homepage').addClass('hide');
 	$('.homepage').fadeOut(400, function(){$('.prefflavors').fadeIn()});
@@ -272,36 +286,80 @@ $('#introgo').click(function(){
 	//$('.prefflavors').fadeIn();
 });
 
+function updateFlavor(fl){
+	if($('#' + fl).hasClass('active')){
+		refuser.child('flavor').child(fl).set(0);
+	}
+	else {
+		refuser.child('flavor').child(fl).set(5);
+	}
+}
+
+function updateAllergy(al){
+	if($('#' + al).hasClass('active')){
+		refuser.child('allergy').child(al).set(0);
+	}
+	else {
+		refuser.child('allergy').child(al).set(1);
+	}
+}
+
 $('#flavorsnext').click(function(){
 	$('.prefflavors').fadeOut(400, function(){$('.prefallergies').fadeIn()});
-	//$('.prefflavors').addClass('hide');
-	//$('.prefallergies').removeClass('hide');
+	//if buttons are active, set those to fb
 });
 
 $('#allergiesnext').click(function(){
 	$('.prefallergies').fadeOut(400, function(){$('.location').fadeIn()});
-	//$('.prefallergies').addClass('hide');
-	//$('.location').removeClass('hide');
+});
+
+// var restaurantList = document.getElementByClassName("location");
+// //var restaurantList = $('.location');
+// for(var )
+// restaurantList.getElementsByTagName("P")[i].innerHTML;
+
+// var restaurantName = "";
+
+// if($('.location #' + ).hasClass('active')) restaurantName = 
+
+var restaurantName = "WooChon";
+$('#welc').append(restaurantName + "!");
+
+$('#locationnext').click(function(){
+	$('.location').fadeOut(400, function(){$('.welcome').fadeIn()});
+});
+
+$('#welcomenext').click(function(){
+	$('.welcome').fadeOut(400, function(){$('.rest1').fadeIn()});
+});
+
+$('#rest1next').click(function(){
+	$('.rest1').fadeOut(400, function(){$('.rest2').fadeIn()});
+});
+
+$('#rest2next').click(function(){
+	$('.rest2').fadeOut(400, function(){$('.rest3').fadeIn()});
+});
+
+$('#rest3next').click(function(){
+	$('.rest3').fadeOut(400, function(){$('.rest4').fadeIn()});
+});
+
+$('#rest4next').click(function(){
+	$('.rest4').fadeOut(400, function(){$('.result').fadeIn()});
+});
+
+$('#resultnext').click(function(){
+	$('.result').fadeOut(400, function(){$('.fin').fadeIn()});
 });
 
 $(' .button').click(function(){
-	//alert($(this).css('background-color'));
 	if(!$(this).hasClass('active')){
 		$(this).addClass('active');
-		//alert($(this).css('background-color'));
 	}
 	else {
 		$(this).removeClass('active');
 	}
 });
 
-$('.prefallergies .button').click(function(){
-	//alert($(this).css('background-color'));
-	if(!$(this).hasClass('active')){
-		$(this).addClass('active');
-		//alert($(this).css('background-color'));
-	}
-	else {
-		$(this).removeClass('active');
-	}
-});
+//var braintree = Braintree.create('MIIBCgKCAQEAyBNQj5ew/K8fDa0FcTo4xZzEX+cDgmjQTscsfrWv81heC57PbOTl4c+cwoVnySQLKjKpChUBxurkkHz9TzIxLn8e+kdJn2ZeG9ljfNzCqvUcXihFCMZ5ZAFX9O4lEYu5hp16387EgnjCl3+XYyG8NYrydaB2BTGJbfYSFUvCD+rdd3cwJMxC38pLNE+yrBwOiTwPjn+7dNkKnur9Hq6dTaZ+cKLLr7JNUnXRjWTyyz3ec9vXdFwlrvB43Ey6PsuBU1ZZq0dEsdP0aPzHl3nk5ZHkZEBz2hIsbTaX2AYGLuFUMnQObgDhXPZRvl2xGm7paEF4fC5bMR8iBMsyx8Lx3wIDAQAB');
