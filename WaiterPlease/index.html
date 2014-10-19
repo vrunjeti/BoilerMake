@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/app.css" />
     <script src="bower_components/modernizr/modernizr.js"></script>
     <script src="https://cdn.firebase.com/js/client/1.1.2/firebase.js"></script>
+    <!-- <script src="https://js.braintreegateway.com/v2/braintree.js"></script> -->
 
   </head>
   <body>
@@ -34,46 +35,46 @@
       
       <div class="row">
         <div class="column small-6">
-          <p class="button expand" data-attribute="spicy">Spicy</p>
+          <p id="spicy" class="button expand" type="checkbox" checked="unchecked" data-attribute="spicy" onclick="updateFlavor('spicy')">Spicy</p>
         </div>
         <div class="column small-6">
-          <p class="button expand" data-attribute="sweet">Sweet</p>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="column small-6">
-          <p class="button expand" data-attribute="sour">Sour</p>
-        </div>
-        <div class="column small-6">
-          <p class="button expand" data-attribute="salty">Salty</p>
+          <p id="sweet" class="button expand" type="checkbox" checked="checked" data-attribute="sweet" onclick="updateFlavor('sweet')">Sweet</p>
         </div>
       </div>
 
       <div class="row">
         <div class="column small-6">
-          <p class="button expand" data-attribute="fruity">Fruity</p>
+          <p id="sour" class="button expand" type="checkbox" checked="checked" data-attribute="sour" onclick="updateFlavor('sour')">Sour</p>
         </div>
         <div class="column small-6">
-          <p class="button expand" data-attribute="tart">Tart</p>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="column small-6">
-          <p class="button expand" data-attribute="bitter">Bitter</p>
-        </div>
-        <div class="column small-6">
-          <p class="button expand" data-attribute="buttery">Buttery</p>
+          <p id="salty" class="button expand" data-attribute="salty" onclick="updateFlavor('salty')">Salty</p>
         </div>
       </div>
 
       <div class="row">
         <div class="column small-6">
-          <p class="button expand" data-attribute="pickled">Pickled</p>
+          <p id="fruity" class="button expand" data-attribute="fruity" onclick="updateFlavor('fruity')">Fruity</p>
         </div>
         <div class="column small-6">
-          <p class="button expand" data-attribute="unseasoned">Unseasoned</p>
+          <p id="tart" class="button expand" data-attribute="tart" onclick="updateFlavor('tart')">Tart</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="column small-6">
+          <p id="bitter" class="button expand" data-attribute="bitter" onclick="updateFlavor('bitter')">Bitter</p>
+        </div>
+        <div class="column small-6">
+          <p id="buttery" class="button expand" data-attribute="buttery" onclick="updateFlavor('buttery')">Buttery</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="column small-6">
+          <p id="pickled" class="button expand" data-attribute="pickled" onclick="updateFlavor('pickled')">Pickled</p>
+        </div>
+        <div class="column small-6">
+          <p id="unseasoned" class="button expand" data-attribute="unseasoned" onclick="updateFlavor('unseasoned')">Unseasoned</p>
         </div>
       </div>
 
@@ -136,7 +137,7 @@
       <h2>Where are you?</h2>
       
       <div class="column small-12">
-        <p class="button expand">Option 1</p>
+        <p class="button expand">WooChon</p>
       </div>
       <div class="column small-12">
         <p class="button expand">Option 2</p>
@@ -249,6 +250,30 @@
       </div>
 
       <img id="rest4next" src="img/arrow.png" width="100">
+    </div>
+
+    <div class="result hide">
+      <h2>Here is my recommendation</h2>
+
+      
+
+      <img id="resultnext" src="img/arrow.png" width="100">
+    </div>
+
+    <div class="fin hide">
+      <h2>Order and Pay</h2>
+      
+    <script src="https://www.paypalobjects.com/js/external/paypal-button.min.js?merchant=munjeti2@illinois.edu" 
+          data-button="buynow" 
+          data-name="WaiterPlease" 
+          data-quantity="1" 
+          data-amount-editable="10.00" 
+          data-shipping="0" 
+          data-tax="0"
+              data-text="Pay"
+          data-env="sandbox">
+      </script>
+    
     </div>
     
     <script src="bower_components/jquery/dist/jquery.min.js"></script>

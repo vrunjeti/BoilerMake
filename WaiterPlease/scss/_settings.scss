@@ -446,8 +446,8 @@ $coral: #e64a19;
 // $button-function-factor: -20%;
 
 // We use these to control button border and hover styles.
-// $button-border-width: 0px;
-// $button-border-style: solid;
+$button-border-width: 1px;
+$button-border-style: solid #fafafa;
 $button-bg-color: $coral;
 // $button-bg-hover: scale-color($button-bg-color, $lightness: $button-function-factor);
 // $button-border-color: $button-bg-hover;

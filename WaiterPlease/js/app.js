@@ -136,6 +136,8 @@ function success(pos){
 	lon = pos.longitude;
 }
 
+//alert("lat = " + lat + " lon = " + lon);
+
 var position = navigator.geolocation.getCurrentPosition(success);
 //console.log(position);
 
@@ -147,8 +149,18 @@ $('#introgo').click(function(){
 	//$('.prefflavors').fadeIn();
 });
 
+function updateFlavor(fl){
+	if($('#' + fl).hasClass('active')){
+		refuser.child('flavor').child(fl).set(0);
+	}
+	else {
+		refuser.child('flavor').child(fl).set(5);
+	}
+}
+
 $('#flavorsnext').click(function(){
 	$('.prefflavors').fadeOut(400, function(){$('.prefallergies').fadeIn()});
+	//if buttons are active, set those to fb
 });
 
 $('#allergiesnext').click(function(){
@@ -181,7 +193,11 @@ $('#rest3next').click(function(){
 });
 
 $('#rest4next').click(function(){
-	$('.rest4').fadeOut(400, function(){$('.').fadeIn()});
+	$('.rest4').fadeOut(400, function(){$('.result').fadeIn()});
+});
+
+$('#resultnext').click(function(){
+	$('.result').fadeOut(400, function(){$('.fin').fadeIn()});
 });
 
 $(' .button').click(function(){
@@ -192,3 +208,5 @@ $(' .button').click(function(){
 		$(this).removeClass('active');
 	}
 });
+
+//var braintree = Braintree.create('MIIBCgKCAQEAyBNQj5ew/K8fDa0FcTo4xZzEX+cDgmjQTscsfrWv81heC57PbOTl4c+cwoVnySQLKjKpChUBxurkkHz9TzIxLn8e+kdJn2ZeG9ljfNzCqvUcXihFCMZ5ZAFX9O4lEYu5hp16387EgnjCl3+XYyG8NYrydaB2BTGJbfYSFUvCD+rdd3cwJMxC38pLNE+yrBwOiTwPjn+7dNkKnur9Hq6dTaZ+cKLLr7JNUnXRjWTyyz3ec9vXdFwlrvB43Ey6PsuBU1ZZq0dEsdP0aPzHl3nk5ZHkZEBz2hIsbTaX2AYGLuFUMnQObgDhXPZRvl2xGm7paEF4fC5bMR8iBMsyx8Lx3wIDAQAB');
