@@ -1,0 +1,874 @@
+{
+  "restaurant" : {
+    "WooChon" : {
+      "menu" : {
+        "Ah Goo Jim" : {
+          "contains" : {
+            "beef" : 0,
+            "chicken": 0,
+            "fish" : 1,
+            "milk" : 0,
+            "peanuts" : 0,
+            "pork" : 0,
+            "shellfish" : 0,
+            "soy" : 0,
+            "treenuts" : 0,
+            "wheat" : 0
+          },
+          "flavor" : {
+            "bitter" : 0,
+            "fruity" : 0,
+            "buttery" : 0,
+            "pickled" : 0,
+            "salty" : 1,
+            "sour" : 0,
+            "spicy" : 1,
+            "sweet" : 1,
+            "tart" : 0,
+            "unseasoned" : 0
+          },
+          "healthy" : {
+            "value" : 0
+          },
+          "texture" : {
+            "noodles" : 0,
+            "rice" : 0,
+            "stew" : 1
+          }
+        },
+        "Ahl Jigae" : {
+          "contains" : {
+            "beef" : 0,
+            "chicken": 0,
+            "fish" : 1,
+            "milk" : 0,
+            "peanuts" : 0,
+            "pork" : 0,
+            "shellfish" : 0,
+            "soy" : 0,
+            "treenuts" : 0,
+            "wheat" : 0
+          },
+          "flavor" : {
+            "bitter" : 0,
+            "fruity" : 0,
+            "buttery" : 0,
+            "pickled" : 0,
+            "salty" : 1,
+            "sour" : 0,
+            "spicy" : 1,
+            "sweet" : 0,
+            "tart" : 0,
+            "unseasoned" : 0
+          },
+          "healthy" : {
+            "value" : 1
+          },
+          "texture" : {
+            "noodles" : 0,
+            "rice" : 0,
+            "stew" : 1
+          }
+        },
+        "Bi Bim Naeng Myun" : {
+          "contains" : {
+            "beef" : 1,
+            "chicken": 0,
+            "fish" : 0,
+            "milk" : 0,
+            "peanuts" : 0,
+            "pork" : 0,
+            "shellfish" : 0,
+            "soy" : 0,
+            "treenuts" : 0,
+            "wheat" : 0
+          },
+          "flavor" : {
+            "bitter" : 0,
+            "fruity" : 0,
+            "buttery" : 1,
+            "pickled" : 0,
+            "salty" : 0,
+            "sour" : 0,
+            "spicy" : 1,
+            "sweet" : 1,
+            "tart" : 0,
+            "unseasoned" : 0
+          },
+          "healthy" : {
+            "value" : 1
+          },
+          "texture" : {
+            "noodles" : 1,
+            "rice" : 0,
+            "stew" : 0
+          }
+        },
+        "Dae Goo Tang" : {
+          "contains" : {
+            "beef" : 0,
+            "chicken": 0,
+            "fish" : 1,
+            "milk" : 0,
+            "peanuts" : 0,
+            "pork" : 0,
+            "shellfish" : 0,
+            "soy" : 0,
+            "treenuts" : 0,
+            "wheat" : 0
+          },
+          "flavor" : {
+            "bitter" : 0,
+            "fruity" : 0,
+            "buttery" : 0,
+            "pickled" : 0,
+            "salty" : 1,
+            "sour" : 0,
+            "spicy" : 1,
+            "sweet" : 0,
+            "tart" : 0,
+            "unseasoned" : 0
+          },
+          "healthy" : {
+            "value" : 1
+          },
+          "texture" : {
+            "noodles" : 0,
+            "rice" : 0,
+            "stew" : 1
+          }
+        },
+        "Dak Do Ri Tang" : {
+          "contains" : {
+            "beef" : 0,
+            "chicken": 0,
+            "fish" : 0,
+            "milk" : 0,
+            "peanuts" : 0,
+            "pork" : 0,
+            "shellfish" : 0,
+            "soy" : 0,
+            "treenuts" : 0,
+            "wheat" : 0
+          },
+          "flavor" : {
+            "bitter" : 0,
+            "fruity" : 0,
+            "buttery" : 0,
+            "pickled" : 0,
+            "salty" : 1,
+            "sour" : 0,
+            "spicy" : 1,
+            "sweet" : 1,
+            "tart" : 0,
+            "unseasoned" : 0
+          },
+          "healthy" : {
+            "value" : 0
+          },
+          "texture" : {
+            "noodles" : 0,
+            "rice" : 0,
+            "stew" : 1
+          }
+        },
+        "Doinjang Jigae" : {
+          "contains" : {
+            "beef" : 0,
+            "chicken": 0,
+            "fish" : 1,
+            "milk" : 0,
+            "peanuts" : 0,
+            "pork" : 1,
+            "shellfish" : 0,
+            "soy" : 0,
+            "treenuts" : 0,
+            "wheat" : 0
+          },
+          "flavor" : {
+            "bitter" : 0,
+            "fruity" : 0,
+            "buttery" : 0,
+            "pickled" : 0,
+            "salty" : 1,
+            "sour" : 0,
+            "spicy" : 1,
+            "sweet" : 0,
+            "tart" : 0,
+            "unseasoned" : 0
+          },
+          "healthy" : {
+            "value" : 1
+          },
+          "texture" : {
+            "noodles" : 0,
+            "rice" : 0,
+            "stew" : 1
+          }
+        },
+        "Dol Sot Bi Bim Bap" : {
+          "contains" : {
+            "beef" : 1,
+            "chicken": 0,
+            "fish" : 0,
+            "milk" : 0,
+            "peanuts" : 0,
+            "pork" : 0,
+            "shellfish" : 0,
+            "soy" : 0,
+            "treenuts" : 0,
+            "wheat" : 0
+          },
+          "flavor" : {
+            "bitter" : 0,
+            "fruity" : 0,
+            "buttery" : 1,
+            "pickled" : 0,
+            "salty" : 1,
+            "sour" : 0,
+            "spicy" : 0,
+            "sweet" : 0,
+            "tart" : 0,
+            "unseasoned" : 0
+          },
+          "healthy" : {
+            "value" : 0
+          },
+          "texture" : {
+            "noodles" : 0,
+            "rice" : 1,
+            "stew" : 0
+          }
+        },
+        "Duk Mandoo Gook" : {
+          "contains" : {
+            "beef" : 0,
+            "chicken": 0,
+            "fish" : 0,
+            "milk" : 0,
+            "peanuts" : 0,
+            "pork" : 1,
+            "shellfish" : 0,
+            "soy" : 0,
+            "treenuts" : 0,
+            "wheat" : 0
+          },
+          "flavor" : {
+            "bitter" : 0,
+            "fruity" : 0,
+            "buttery" : 1,
+            "pickled" : 0,
+            "salty" : 1,
+            "sour" : 0,
+            "spicy" : 0,
+            "sweet" : 0,
+            "tart" : 0,
+            "unseasoned" : 0
+          },
+          "healthy" : {
+            "value" : 0
+          },
+          "texture" : {
+            "noodles" : 0,
+            "rice" : 0,
+            "stew" : 1
+          }
+        },
+        "Gal Bi Gui" : {
+          "contains" : {
+            "beef" : 1,
+            "chicken": 0,
+            "fish" : 0,
+            "milk" : 0,
+            "peanuts" : 0,
+            "pork" : 0,
+            "shellfish" : 0,
+            "soy" : 0,
+            "treenuts" : 0,
+            "wheat" : 0
+          },
+          "flavor" : {
+            "bitter" : 0,
+            "fruity" : 0,
+            "buttery" : 1,
+            "pickled" : 0,
+            "salty" : 1,
+            "sour" : 0,
+            "spicy" : 0,
+            "sweet" : 0,
+            "tart" : 0,
+            "unseasoned" : 0
+          },
+          "healthy" : {
+            "value" : 1
+          },
+          "texture" : {
+            "noodles" : 0,
+            "rice" : 1,
+            "stew" : 0
+          }
+        },
+        "Gal Bi Tang" : {
+          "contains" : {
+            "beef" : 1,
+            "chicken": 0,
+            "fish" : 0,
+            "milk" : 0,
+            "peanuts" : 0,
+            "pork" : 0,
+            "shellfish" : 0,
+            "soy" : 0,
+            "treenuts" : 0,
+            "wheat" : 0
+          },
+          "flavor" : {
+            "bitter" : 0,
+            "fruity" : 0,
+            "buttery" : 1,
+            "pickled" : 0,
+            "salty" : 1,
+            "sour" : 0,
+            "spicy" : 0,
+            "sweet" : 0,
+            "tart" : 0,
+            "unseasoned" : 0
+          },
+          "healthy" : {
+            "value" : 1
+          },
+          "texture" : {
+            "noodles" : 0,
+            "rice" : 0,
+            "stew" : 1
+          }
+        },
+        "Go Dung Uh Gui" : {
+          "contains" : {
+            "beef" : 1,
+            "chicken": 0,
+            "fish" : 0,
+            "milk" : 0,
+            "peanuts" : 0,
+            "pork" : 0,
+            "shellfish" : 0,
+            "soy" : 0,
+            "treenuts" : 0,
+            "wheat" : 0
+          },
+          "flavor" : {
+            "bitter" : 0,
+            "fruity" : 0,
+            "buttery" : 1,
+            "pickled" : 0,
+            "salty" : 1,
+            "sour" : 0,
+            "spicy" : 0,
+            "sweet" : 0,
+            "tart" : 0,
+            "unseasoned" : 0
+          },
+          "healthy" : {
+            "value" : 0
+          },
+          "texture" : {
+            "noodles" : 0,
+            "rice" : 1,
+            "stew" : 0
+          }
+        },
+        "Hae Mool Jeon Gol" : {
+          "contains" : {
+            "beef" : 0,
+            "chicken": 0,
+            "fish" : 1,
+            "milk" : 0,
+            "peanuts" : 0,
+            "pork" : 0,
+            "shellfish" : 0,
+            "soy" : 0,
+            "treenuts" : 0,
+            "wheat" : 0
+          },
+          "flavor" : {
+            "bitter" : 0,
+            "fruity" : 0,
+            "buttery" : 0,
+            "pickled" : 0,
+            "salty" : 0,
+            "sour" : 0,
+            "spicy" : 1,
+            "sweet" : 0,
+            "tart" : 0,
+            "unseasoned" : 0
+          },
+          "healthy" : {
+            "value" : 0
+          },
+          "texture" : {
+            "noodles" : 0,
+            "rice" : 1,
+            "stew" : 0
+          }
+        },
+        "Hoi Naeng Myun" : {
+          "contains" : {
+            "beef" : 1,
+            "chicken": 0,
+            "fish" : 1,
+            "milk" : 0,
+            "peanuts" : 0,
+            "pork" : 0,
+            "shellfish" : 0,
+            "soy" : 0,
+            "treenuts" : 0,
+            "wheat" : 0
+          },
+          "flavor" : {
+            "bitter" : 0,
+            "fruity" : 0,
+            "buttery" : 1,
+            "pickled" : 0,
+            "salty" : 1,
+            "sour" : 0,
+            "spicy" : 0,
+            "sweet" : 0,
+            "tart" : 0,
+            "unseasoned" : 0
+          },
+          "healthy" : {
+            "value" : 1
+          },
+          "texture" : {
+            "noodles" : 1,
+            "rice" : 0,
+            "stew" : 0
+          }
+        },
+        "Jap Chae " : {
+          "contains" : {
+            "beef" : 1,
+            "chicken": 0,
+            "fish" : 0,
+            "milk" : 0,
+            "peanuts" : 0,
+            "pork" : 0,
+            "shellfish" : 0,
+            "soy" : 0,
+            "treenuts" : 0,
+            "wheat" : 0
+          },
+          "flavor" : {
+            "bitter" : 0,
+            "fruity" : 0,
+            "buttery" : 1,
+            "pickled" : 0,
+            "salty" : 1,
+            "sour" : 0,
+            "spicy" : 0,
+            "sweet" : 0,
+            "tart" : 0,
+            "unseasoned" : 0
+          },
+          "healthy" : {
+            "value" : 1
+          },
+          "texture" : {
+            "noodles" : 1,
+            "rice" : 0,
+            "stew" : 0
+          }
+        },
+        "Johki" : {
+          "contains" : {
+            "beef" : 0,
+            "chicken": 0,
+            "fish" : 1,
+            "milk" : 0,
+            "peanuts" : 0,
+            "pork" : 0,
+            "shellfish" : 0,
+            "soy" : 0,
+            "treenuts" : 0,
+            "wheat" : 0
+          },
+          "flavor" : {
+            "bitter" : 0,
+            "fruity" : 0,
+            "buttery" : 1,
+            "pickled" : 0,
+            "salty" : 1,
+            "sour" : 0,
+            "spicy" : 1,
+            "sweet" : 0,
+            "tart" : 0,
+            "unseasoned" : 0
+          },
+          "healthy" : {
+            "value" : 0
+          },
+          "texture" : {
+            "noodles" : 0,
+            "rice" : 1,
+            "stew" : 0
+          }
+        },
+        "Kalgooksoo" : {
+          "contains" : {
+            "beef" : 1,
+            "chicken": 0,
+            "fish" : 1,
+            "milk" : 0,
+            "peanuts" : 0,
+            "pork" : 0,
+            "shellfish" : 0,
+            "soy" : 0,
+            "treenuts" : 0,
+            "wheat" : 0
+          },
+          "flavor" : {
+            "bitter" : 0,
+            "fruity" : 0,
+            "buttery" : 1,
+            "pickled" : 0,
+            "salty" : 1,
+            "sour" : 0,
+            "spicy" : 1,
+            "sweet" : 0,
+            "tart" : 0,
+            "unseasoned" : 0
+          },
+          "healthy" : {
+            "value" : 1
+          },
+          "texture" : {
+            "noodles" : 1,
+            "rice" : 0,
+            "stew" : 0
+          }
+        },
+        "Kam Ja Tang" : {
+          "contains" : {
+            "beef" : 0,
+            "chicken": 0,
+            "fish" : 0,
+            "milk" : 0,
+            "peanuts" : 0,
+            "pork" : 1,
+            "shellfish" : 0,
+            "soy" : 0,
+            "treenuts" : 0,
+            "wheat" : 0
+          },
+          "flavor" : {
+            "bitter" : 0,
+            "fruity" : 0,
+            "buttery" : 0,
+            "pickled" : 0,
+            "salty" : 1,
+            "sour" : 0,
+            "spicy" : 1,
+            "sweet" : 1,
+            "tart" : 0,
+            "unseasoned" : 0
+          },
+          "healthy" : {
+            "value" : 0
+          },
+          "texture" : {
+            "noodles" : 0,
+            "rice" : 0,
+            "stew" : 1
+          }
+        },
+        "Kimchee Jigae" : {
+          "contains" : {
+            "beef" : 1,
+            "chicken": 0,
+            "fish" : 0,
+            "milk" : 0,
+            "peanuts" : 0,
+            "pork" : 0,
+            "shellfish" : 0,
+            "soy" : 0,
+            "treenuts" : 0,
+            "wheat" : 0
+          },
+          "flavor" : {
+            "bitter" : 0,
+            "fruity" : 0,
+            "buttery" : 0,
+            "pickled" : 0,
+            "salty" : 1,
+            "sour" : 0,
+            "spicy" : 1,
+            "sweet" : 0,
+            "tart" : 0,
+            "unseasoned" : 0
+          },
+          "healthy" : {
+            "value" : 0
+          },
+          "texture" : {
+            "noodles" : 0,
+            "rice" : 0,
+            "stew" : 1
+          }
+        },
+        "Soon Tofu" : {
+          "contains" : {
+            "beef" : 0,
+            "chicken": 0,
+            "fish" : 1,
+            "milk" : 0,
+            "peanuts" : 0,
+            "pork" : 1,
+            "shellfish" : 0,
+            "soy" : 0,
+            "treenuts" : 0,
+            "wheat" : 0
+          },
+          "flavor" : {
+            "bitter" : 0,
+            "fruity" : 0,
+            "buttery" : 1,
+            "pickled" : 0,
+            "salty" : 0,
+            "sour" : 0,
+            "spicy" : 1,
+            "sweet" : 0,
+            "tart" : 0,
+            "unseasoned" : 0
+          },
+          "healthy" : {
+            "value" : 0
+          },
+          "texture" : {
+            "noodles" : 0,
+            "rice" : 0,
+            "stew" : 1
+          }
+        },
+        "Sul Lang Tang" : {
+          "contains" : {
+            "beef" : 1,
+            "chicken": 0,
+            "fish" : 0,
+            "milk" : 0,
+            "peanuts" : 0,
+            "pork" : 0,
+            "shellfish" : 0,
+            "soy" : 0,
+            "treenuts" : 0,
+            "wheat" : 0
+          },
+          "flavor" : {
+            "bitter" : 0,
+            "fruity" : 0,
+            "buttery" : 1,
+            "pickled" : 0,
+            "salty" : 1,
+            "sour" : 0,
+            "spicy" : 0,
+            "sweet" : 0,
+            "tart" : 0,
+            "unseasoned" : 0
+          },
+          "healthy" : {
+            "value" : 0
+          },
+          "texture" : {
+            "noodles" : 0,
+            "rice" : 0,
+            "stew" : 1
+          }
+        },
+        "Taro Gook Bap" : {
+          "contains" : {
+            "beef" : 1,
+            "chicken": 0,
+            "fish" : 0,
+            "milk" : 0,
+            "peanuts" : 0,
+            "pork" : 0,
+            "shellfish" : 0,
+            "soy" : 0,
+            "treenuts" : 0,
+            "wheat" : 0
+          },
+          "flavor" : {
+            "bitter" : 0,
+            "fruity" : 0,
+            "buttery" : 0,
+            "pickled" : 0,
+            "salty" : 1,
+            "sour" : 0,
+            "spicy" : 1,
+            "sweet" : 0,
+            "tart" : 0,
+            "unseasoned" : 0
+          },
+          "healthy" : {
+            "value" : 1
+          },
+          "texture" : {
+            "noodles" : 0,
+            "rice" : 0,
+            "stew" : 1
+          }
+        },
+        "Yook Jae Jang" : {
+          "contains" : {
+            "beef" : 1,
+            "chicken": 0,
+            "fish" : 0,
+            "milk" : 0,
+            "peanuts" : 0,
+            "pork" : 0,
+            "shellfish" : 0,
+            "soy" : 0,
+            "treenuts" : 0,
+            "wheat" : 0
+          },
+          "flavor" : {
+            "bitter" : 0,
+            "fruity" : 0,
+            "buttery" : 0,
+            "pickled" : 0,
+            "salty" : 1,
+            "sour" : 0,
+            "spicy" : 1,
+            "sweet" : 0,
+            "tart" : 0,
+            "unseasoned" : 0
+          },
+          "healthy" : {
+            "value" : 0
+          },
+          "texture" : {
+            "noodles" : 0,
+            "rice" : 0,
+            "stew" : 1
+          }
+        },
+        "Youm So Tang" : {
+          "contains" : {
+            "beef" : 0,
+            "chicken": 0,
+            "fish" : 0,
+            "milk" : 0,
+            "peanuts" : 0,
+            "pork" : 0,
+            "shellfish" : 0,
+            "soy" : 0,
+            "treenuts" : 0,
+            "wheat" : 0
+          },
+          "flavor" : {
+            "bitter" : 0,
+            "fruity" : 0,
+            "buttery" : 0,
+            "pickled" : 0,
+            "salty" : 1,
+            "sour" : 0,
+            "spicy" : 1,
+            "sweet" : 0,
+            "tart" : 0,
+            "unseasoned" : 0
+          },
+          "healthy" : {
+            "value" : 0
+          },
+          "texture" : {
+            "noodles" : 0,
+            "rice" : 0,
+            "stew" : 1
+          }
+        }
+      },
+      "property" : {
+        "ethnic" : "Korean",
+        "lat" : 41.986256,
+        "long" : -87.699599
+      }
+    },
+    "default_rest" : {
+      "menu" : {
+        "default_food" : {
+          "contains" : {
+            "beef" : 0,
+            "chicken": 0,
+            "fish" : 0,
+            "milk" : 0,
+            "peanuts" : 0,
+            "pork" : 0,
+            "shellfish" : 0,
+            "soy" : 0,
+            "treenuts" : 0,
+            "wheat" : 0
+          },
+          "flavor" : {
+            "bitter" : 0,
+            "fruity" : 0,
+            "buttery" : 0,
+            "pickled" : 0,
+            "salty" : 0,
+            "sour" : 0,
+            "spicy" : 0,
+            "sweet" : 0,
+            "tart" : 0,
+            "unseasoned" : 0
+          },
+          "healthy" : {
+            "value" : 0
+          },
+          "texture" : {
+            "noodles" : 0,
+            "rice" : 0,
+            "stew" : 0
+          }
+        }
+      },
+      "property" : {
+        "ethnic" : "default",
+        "lat" : 0,
+        "long" : 0
+      }
+    }
+  },
+  "user" : {
+    "mosab" : {
+      "allergy" : {
+        "beef" : 0,
+        "chicken": 0,
+        "fish" : 0,
+        "milk" : 0,
+        "peanuts" : 0,
+        "pork" : 1,
+        "shellfish" : 0,
+        "soy" : 0,
+        "treenuts" : 0,
+        "wheat" : 0
+      },
+      "flavor" : {
+        "bitter" : 5,
+        "buttery" : 5,
+        "fruity" : 5,
+        "pickled" : 0,
+        "salty" : 5,
+        "sour" : 0,
+        "spicy" : 0,
+        "sweet" : 5,
+        "tart" : 0,
+        "unseasoned" : 0
+      },
+      "healthy" : {
+        "value" : 0
+      },
+      "texture" : {
+        "noodles" : 0,
+        "rice" : 0,
+        "stew" : 0
+      }
+    }
+  }
+}
