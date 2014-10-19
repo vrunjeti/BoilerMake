@@ -16,114 +16,253 @@ ref.on('value', function(dataSnapshot) {
 
 	var username = data.user.mosab;
 	var restaurant = data.restaurant.WooChon;
-	console.log(restaurant);
+
 	var result = formula(username, restaurant.menu);
 
+	var filteredresult = filteredformula(username, restaurant.menu);	//for use with texture option
+	
 	var ubitter = (data.user.mosab.flavor.bitter);
 });
 
 var formula = function(username, menu){
-	//list of user's allergies
-	var uallergies = username.allergy;
-	//list of user's flavors
-	var uflavor = username.flavor;
-	//user's healthy preference (not list)
-	var uhealthy = username.healthy;
+	var uhealthy = username.healthy.value;
 
-	//list of menu item flavor values
-	var rflavor;
-	//list of menu item healthy value
+	var uallergies = [];	//list of user's allergies
+
+	var index = -1;
+	Object.keys(username.allergy).forEach(function(allergen){
+		index++;
+		uallergies[index] = username.allergy[allergen];
+	});
+
+
+	var uflavor = [];	//list of user's flavors
+
+	index = -1;
+	Object.keys(username.flavor).forEach(function(flava){
+		index++;
+		uflavor[index] = username.flavor[flava];
+	});
+
+	// console.log(uflavor);
 
 	var results = [];
-console.log(menu);
-	var i=-1;
 
-// for(var key in menu)
-// {
-// 	i++;
-// 	var rhealthy = Object.keys(menu).healthy; 							//check if item is healthy
-// }
-// var 
-var results = [];
+	//flavor foor loop	
+	var itemindex=0;		//index of the menu item
+	var flavorindex=0;	//index for summing flavors
 
-Object.keys(menu).forEach(function(menuitem)
-{
-	Object.keys(menuitem).forEach(function(properties){
+	Object.keys(menu).forEach(function(menuitem){
+		results[itemindex] = 0;
+		Object.keys(menu[menuitem]).forEach(function(properties){
+			var itemobject = menu[menuitem];
+			Object.keys(itemobject[properties]).forEach(function(keys){
+				keyobject = itemobject[properties][keys];
+				if(properties == "flavor")
+				{
+					results[itemindex] += uflavor[flavorindex]*keyobject;
+					flavorindex++;
+				}
+			});
+			flavorindex =0;
+		});
+		itemindex++;
+	});
+		console.log("Initial: "+ results);
+
+	//allergy for loop	
+	itemindex=0;		//index of the menu item
+	var allergyindex=0;	//index for summing flavors
+
+	Object.keys(menu).forEach(function(menuitem){
+		Object.keys(menu[menuitem]).forEach(function(properties){
+			var itemobject = menu[menuitem];
+			Object.keys(itemobject[properties]).forEach(function(keys){
+				keyobject = itemobject[properties][keys];
+				if(properties == "contains")
+				{
+					if(uallergies[allergyindex] == 1 && keyobject == 1)
+						results[itemindex] = 0;
+					allergyindex++;
+				}
+			});
+			allergyindex =0;
+		});
+		itemindex++;
+	});
+
+		console.log("allergy: "+ results);
+
+	//allergy for loop	
+	itemindex=0;		//index of the menu item
+
+	Object.keys(menu).forEach(function(menuitem){
+		Object.keys(menu[menuitem]).forEach(function(properties){
+			var itemobject = menu[menuitem];
+			Object.keys(itemobject[properties]).forEach(function(keys){
+				keyobject = itemobject[properties][keys];
+				if(properties == "healthy")
+				{
+					if(uhealthy == 1 && keyobject === 0)
+						results[itemindex] = 0;
+				}
+			});
+		});
+		itemindex++;
+	});
+
+		console.log("healthy: "+ results);
+
+	//get first, second, third
+	var finalresult = [];
+
+	//initialize final array
+	finalresult[0] = 0;
+	finalresult[1] = 0;
+	finalresult[2] = 0;
+
+	for(var i=0; i<results.length; i++)
 	{
-		Object.keys(properties).forEach()
-		results.push()
-	})
-});
+		if(results[i] < finalresult[2])
+			continue;
+		else if(results[i] > finalresult[0])
+		{
+			finalresult[2] = finalresult[1];
+			finalresult[1] = finalresult[0];
+			finalresult[0] = i;
+		}
+		else if(results[i] > finalresult[1])
+		{
+			finalresult[2] = finalresult[1];
+			finalresult[1] = i;
+		}
+		else if(results[i] > finalresult[2])
+		{
+			finalresult[2] = i;
+		}
+	}
+	console.log(finalresult);
+}
 
-// 	for(var i = 0; i < Object.keys(menu).length; i++)								//iterate through each menu item
-// 	{ 	
-// 		console.log(i);
+var filteredformula = function(username, menu){
+	var uhealthy = username.healthy.value;
 
-// 		var rhealthy = Object.keys(menu).healthy; 							//check if item is healthy
-		
-// 		console.log(rhealthy);
-// 		if(uhealthy == 1 && rhealthy == 0)
-// 		{
-// 			results[i] = -1;	//set to exit value if not
-// 			continue;		//move to next item
-// 		} 											
+	var uallergies = [];	//list of user's allergies
 
-// 		for(var j=0; j<uallergies.length; j++) 						//iterate through allergies
-// 		{
-// 			if(menu[i].contains[j] == 1 && uallergies[j] == 1) 		//check if the current item contains an allergen
-// 			{	
-// 				results[i] = -1;
-// 				break;
-// 			} 		
-// 		}
+	var index = -1;
+	Object.keys(username.allergy).forEach(function(allergen){
+		index++;
+		uallergies[index] = username.allergy[allergen];
+	});
 
-// 		if (results[i] == -1) 										//go to the next menu item if the item had an allergen
-// 			continue;
 
-// 		var rflavor = menu[i].flavor;
-		
-// 		results[i] = 0;
-// 		for (var k=0; k<rflavors.length; k++)
-// 		{
-// 			results[i] += rflavors[k]*uflavor[k];
-// 			console.log(results[i]);
+	var uflavor = [];	//list of user's flavors
 
-// 		}
-// 	}
-	
-// 	var first = [0, 0];
-// 	var second = [0, 0];
-// 	var third = [0, 0];
+	index = -1;
+	Object.keys(username.flavor).forEach(function(flava){
+		index++;
+		uflavor[index] = username.flavor[flava];
+	});
 
-// 	first[0] = results[0];
-// 	second[0] = results[0];
-// 	third[0] = results[0];
+	// console.log(uflavor);
 
-// 	for(var i=0; i<results.length; i++)
-// 	{
-// 		if(results[i] < third[0]){
-// 			continue;
-// 		} 
-// 		if(results[i] > first[0]){
-// 			third = second;
-// 			second = first;
-// 			first[0] = results[i];
-// 			first[1] = i;
-// 			continue;
-// 		}
-// 		if(results[i] > second[0]){
-// 			third = second;
-// 			second[0] = results[i];
-// 			second[1] = i;
-// 			continue;
-// 		}
-// 		if(results[i] > second[0]){
-// 			third[0] = results[i];
-// 			third[1] = i;
-// 		}
-// 	}
-// 	return [first[1],second[1],third[1]];
-// }
+	var results = [];
+
+	//flavor foor loop	
+	var itemindex=0;		//index of the menu item
+	var flavorindex=0;	//index for summing flavors
+
+	Object.keys(menu).forEach(function(menuitem){
+		results[itemindex] = 0;
+		Object.keys(menu[menuitem]).forEach(function(properties){
+			var itemobject = menu[menuitem];
+			Object.keys(itemobject[properties]).forEach(function(keys){
+				keyobject = itemobject[properties][keys];
+				if(properties == "flavor")
+				{
+					results[itemindex] += uflavor[flavorindex]*keyobject;
+					flavorindex++;
+				}
+			});
+			flavorindex =0;
+		});
+		itemindex++;
+	});
+		console.log("Initial: "+ results);
+
+	//allergy for loop	
+	itemindex=0;		//index of the menu item
+	var allergyindex=0;	//index for summing flavors
+
+	Object.keys(menu).forEach(function(menuitem){
+		Object.keys(menu[menuitem]).forEach(function(properties){
+			var itemobject = menu[menuitem];
+			Object.keys(itemobject[properties]).forEach(function(keys){
+				keyobject = itemobject[properties][keys];
+				if(properties == "contains")
+				{
+					if(uallergies[allergyindex] == 1 && keyobject == 1)
+						results[itemindex] = 0;
+					allergyindex++;
+				}
+			});
+			allergyindex =0;
+		});
+		itemindex++;
+	});
+
+		console.log("allergy: "+ results);
+
+	//allergy for loop	
+	itemindex=0;		//index of the menu item
+
+	Object.keys(menu).forEach(function(menuitem){
+		Object.keys(menu[menuitem]).forEach(function(properties){
+			var itemobject = menu[menuitem];
+			Object.keys(itemobject[properties]).forEach(function(keys){
+				keyobject = itemobject[properties][keys];
+				if(properties == "healthy")
+				{
+					if(uhealthy == 1 && keyobject === 0)
+						results[itemindex] = 0;
+				}
+			});
+		});
+		itemindex++;
+	});
+
+		console.log("healthy: "+ results);
+
+	//get first, second, third
+	var finalresult = [];
+
+	//initialize final array
+	finalresult[0] = 0;
+	finalresult[1] = 0;
+	finalresult[2] = 0;
+
+	for(var i=0; i<results.length; i++)
+	{
+		if(results[i] < finalresult[2])
+			continue;
+		else if(results[i] > finalresult[0])
+		{
+			finalresult[2] = finalresult[1];
+			finalresult[1] = finalresult[0];
+			finalresult[0] = i;
+		}
+		else if(results[i] > finalresult[1])
+		{
+			finalresult[2] = finalresult[1];
+			finalresult[1] = i;
+		}
+		else if(results[i] > finalresult[2])
+		{
+			finalresult[2] = i;
+		}
+	}
+	console.log(finalresult);
+}
 
 $('#introgo').click(function(){
 	//$('.homepage').addClass('hide');
