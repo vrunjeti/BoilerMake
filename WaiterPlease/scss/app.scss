@@ -50,10 +50,13 @@ nav{
 
 body{
 	$dred: #b0120a;
-	background: scale-color($dred, $lightness: -10%);
+	$coral: #e64a19;
+	//background: scale-color($dred, $lightness: -10%);
+	background: #fafafa;
 	text-align: center;
 	h2{
-		color: scale-color(#fff, $lightness: -20%);
+		//color: scale-color(#fff, $lightness: -20%);
+		color: #888;
 	}
 }
 
@@ -71,11 +74,11 @@ body{
 }
 
 .prefflavors .button.active {
-	background: #555;
-	border: 1px solid #f0f0f0;
+	background: scale-color($coral, $lightness: 25%);
+	border: 1px solid #555;
 }
 
 .prefallergies .button.active {
-	background: #555;
-	border: 1px solid #f0f0f0;
+	background: scale-color($coral, $lightness: 50%);
+	border: 1px solid #555;
 }
