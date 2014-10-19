@@ -2,14 +2,9 @@
 // we could also read the profile to see if it's null
 // here we will just simulate this with an isNewUser boolean
 
-var ref = new Firebase("https://waiter-please.firebaseio.com");
-
-var refuser = new Firebase("https://waiter-please.firebaseio.com/user/mosab");
-var refUserFlavor = new Firebase("https://waiter-please.firebaseio./user/mosab/flavor");
-var refUserTexture = new Firebase("https://waiter-please.firebaseio./user/mosab/texture");
-var refUserAllergy = new Firebase("https://waiter-please.firebaseio./user/mosab/allerg");
-
-var refrest = new Firebase("https://waiter-please.firebaseio.com/restaurant");
+var ref = new Firebase("https://torid-fire-430.firebaseio.com/");
+var refuser = new Firebase("https://torid-fire-430.firebaseio.com/user/mosab");
+var refrest = new Firebase("https://torid-fire-430.firebaseio.com/restaurant");
 
 
 
@@ -26,7 +21,6 @@ ref.onAuth(function(authData) {
 
 });
 */
-console.log(refuser.flavor[0])
 
 if ($("#spicy").prop( "checked" ))
 	refuser.flavor.spicy.update(3);
@@ -60,12 +54,7 @@ if ($("#unseasoned").prop( "checked" ))
 
  /*
  	Assign a score to each food item based on the user preference
- 	Score is calculuated based on user preference.
- 	Score = [~((allergy_1_user * alergy_1_fooditem)) +...+ ((allergy_n_user * alergy_n_fooditem))]
- 			[ 1*((flavor_1_user)*(flavor_1_fooditem) +...+ (flavor_n_user)*(flavor_n_fooditem)) +
- 			 .2*(texture_1_user)*(texture_1_fooditem) +...+(texture_n_user)*(texture_n_fooditem) ]
+ 	Score is calculuated based on user preference
+ 	Score = (Quality_1_user)*(Quality_1_fooditem) + (Quality_2_user)*(Quality_2_fooditem) + ... (Quality_n_user)*(Quality_n_fooditem)
   */
- 
-
-
 
