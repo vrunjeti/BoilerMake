@@ -25,7 +25,35 @@ ref.on('value', function(dataSnapshot) {
 });
 
 var formula = function(username, menu){
-	var uhealthy = username.healthy.value;
+	//var uname = new Firebase(username);
+	//var uhealthy;
+	// username.on('value', function(snapshot){
+	// 	var newPost = snapshot.val();
+	// 	uhealthy = newPost.healthy;
+	// });
+
+	// uname.on('value', function (snapshot) {
+	//   console.log(snapshot.val());
+
+	// }, function (errorObject) {
+	//   console.log('The read failed: ' + errorObject.code);
+	// });
+
+	// var uhealthy;
+
+	// for(var property in username){
+	// 	if(username.hasOwnProperty(property)){
+	// 		uhealthy = username.property;
+	// 	}
+	// }
+
+	// console.log(uhealthy);
+
+	//var uhealthy = username.child('healthy');
+
+	var uhealthy = username.child.value;
+
+	console.log(uhealthy);
 
 	var uallergies = [];	//list of user's allergies
 
@@ -121,26 +149,26 @@ var formula = function(username, menu){
 	finalresult[1] = 0;
 	finalresult[2] = 0;
 
-	for(var i=0; i<results.length; i++)
-	{
-		if(results[i] < finalresult[2])
-			continue;
-		else if(results[i] > finalresult[0])
-		{
-			finalresult[2] = finalresult[1];
-			finalresult[1] = finalresult[0];
-			finalresult[0] = i;
-		}
-		else if(results[i] > finalresult[1])
-		{
-			finalresult[2] = finalresult[1];
-			finalresult[1] = i;
-		}
-		else if(results[i] > finalresult[2])
-		{
-			finalresult[2] = i;
-		}
-	}
+	// for(var i=0; i<results.length; i++)
+	// {
+	// 	if(results[i] < finalresult[2])
+	// 		continue;
+	// 	else if(results[i] > finalresult[0])
+	// 	{
+	// 		finalresult[2] = finalresult[1];
+	// 		finalresult[1] = finalresult[0];
+	// 		finalresult[0] = i;
+	// 	}
+	// 	else if(results[i] > finalresult[1])
+	// 	{
+	// 		finalresult[2] = finalresult[1];
+	// 		finalresult[1] = i;
+	// 	}
+	// 	else if(results[i] > finalresult[2])
+	// 	{
+	// 		finalresult[2] = i;
+	// 	}
+	// }
 	console.log(finalresult);
 	return finalresult;
 }
@@ -311,6 +339,15 @@ function updateAllergy(al){
 	}
 }
 
+function updateHealthy(hl){
+	if(hl == 1){
+		refuser.child('healthy').child('value').set(1);
+	}
+	else {
+		refuser.child('healthy').child('value').set(0);
+	}
+}
+
 $('#flavorsnext').click(function(){
 	$('.prefflavors').fadeOut(400, function(){$('.prefallergies').fadeIn()});
 	//if buttons are active, set those to fb
@@ -340,9 +377,51 @@ $('#locationnext').click(function(){
 	$('.location').fadeOut(400, function(){$('.welcome').fadeIn()});
 });
 
-$('#welcomenext').click(function(){
-	$('.welcome').fadeOut(400, function(){$('.rest1').fadeIn()});
-});
+function auto () {
+	var wooChonMenu = refrest.child('WooChon').child('menu');
+	//var results = formula(refuser,wooChonMenu);
+	// console.log("first choice: " + wooChonMenu + "/1");
+	// var firstChoice = wooChonMenu.result[0];
+	// var secondChoice = wooChonMenu(result[1]);
+	// var thirdChoice = wooChonMenu(result[2]);
+
+	// wooChonMenu.on('value', function (snapshot) {
+	//   console.log(snapshot.val());
+	// }, function (errorObject) {
+	//   console.log('The read failed: ' + errorObject.code);
+	// });
+
+	// wooChonMenu.on('value', function (snapshot) {
+	//   var newPost = snapshot.val();
+	//   console.log("Author: " + newPost.author);
+	//   console.log("Title: " + newPost.title);
+	// });
+	//firstChoice = results[0];
+	var firstChoice = "Sul Lang Tang";
+	var secondChoice = "Taro Gook Bap";
+	var thirdChoice = "Yook Jae Jang";
+	$('#firstChoice').append(firstChoice);
+	$('#secondChoice').append(secondChoice);
+	$('#thirdChoice').append(thirdChoice);
+
+	$('#welcomenext').click(function(){
+		$('.welcome').fadeOut(400, function(){$('.result').fadeIn()});
+	});
+}
+
+function detailed(){
+
+	var firstChoice = "Gal Bi Tang";
+	var secondChoice = "Duk Mandoo Gook";
+	var thirdChoice = "Dol Sot Bi Bim Bap";
+	$('#firstChoice').append(firstChoice);
+	$('#secondChoice').append(secondChoice);
+	$('#thirdChoice').append(thirdChoice);
+
+	$('#welcomenext').click(function(){
+		$('.welcome').fadeOut(400, function(){$('.rest1').fadeIn()});
+	});
+}
 
 $('#rest1next').click(function(){
 	$('.rest1').fadeOut(400, function(){$('.rest2').fadeIn()});

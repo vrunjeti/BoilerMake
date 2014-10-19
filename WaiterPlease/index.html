@@ -138,13 +138,13 @@
 
       <div class="row">
         <div class="column small-12">
-          <p class="button expand" data-attribute="important">Important</p>
+          <p class="button expand" data-attribute="important" onclick="updateHealthy(1)">Important</p>
         </div>
       </div>
 
       <div class="row">
         <div class="column small-12">
-          <p class="button expand" data-attribute="notimportant">Not Important</p>
+          <p class="button expand" data-attribute="notimportant" onclick="updateHealthy(0)">Not Important</p>
         </div>
       </div>
 
@@ -174,13 +174,13 @@
       <h2 id="welc" class="top">Welcome to </h2>
       <h2 style="padding: 0 0 10px">Choose selection option</h2>
       <div class="column small-12">
-        <p class="button expand">Auto</p>
+        <p id="auto" class="button expand" onclick="auto()" >Auto</p>
       </div>
       <div class="column small-12">
-        <p class="button expand">Detailed</p>
+        <p onclick="detailed()" id="detailed" class="button expand">Detailed</p>
       </div>
       <div class="column small-12">
-        <p class="button expand">Try New</p>
+        <p id="trynew" class="button expand">Try New</p>
       </div>
 
       <img id="welcomenext" src="img/arrow2.png" width="50">
@@ -254,8 +254,11 @@
 
     <div class="result hide">
       <h2 class="top">Here is my recommendation</h2>
-
-      
+        <img src="img/logo2.png" width="100">
+        <h2 id="firstChoice"></h2>
+        <h2>Runner Ups:</h2>
+        <h2 id="secondChoice"></h2>
+        <h2 id="thirdChoice"></h2>      
 
       <img id="resultnext" src="img/arrow2.png" width="50">
     </div>
