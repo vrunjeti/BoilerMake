@@ -310,7 +310,11 @@ $('#flavorsnext').click(function(){
 });
 
 $('#allergiesnext').click(function(){
-	$('.prefallergies').fadeOut(400, function(){$('.location').fadeIn()});
+	$('.prefallergies').fadeOut(400, function(){$('.health').fadeIn()});
+});
+
+$('#healthnext').click(function(){
+	$('.health').fadeOut(400, function(){$('.location').fadeIn()});
 });
 
 // var restaurantList = document.getElementByClassName("location");
@@ -342,11 +346,7 @@ $('#rest2next').click(function(){
 });
 
 $('#rest3next').click(function(){
-	$('.rest3').fadeOut(400, function(){$('.rest4').fadeIn()});
-});
-
-$('#rest4next').click(function(){
-	$('.rest4').fadeOut(400, function(){$('.result').fadeIn()});
+	$('.rest3').fadeOut(400, function(){$('.result').fadeIn()});
 });
 
 $('#resultnext').click(function(){
