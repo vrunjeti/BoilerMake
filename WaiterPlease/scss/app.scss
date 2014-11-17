@@ -39,21 +39,40 @@
 //   "foundation/components/offcanvas",
 //   "foundation/components/visibility";
 
-nav{
-	padding: auto 0px;
-	h1{
-		text-align: center;
-		color: #fff;
-		font-size: 1.5em;
-	}
+#introgo {
+	font-size: 15px;
 }
 
-body{
+.top{
+	padding: 15px 0;	
+}
+
+body {
 	$dred: #b0120a;
-	background: scale-color($dred, $lightness: -10%);
+	$coral: #e64a19;
+	//background: scale-color($dred, $lightness: -10%);
+	background: #fafafa;
 	text-align: center;
+	h1, h2{
+		//color: scale-color(#fff, $lightness: -20%);
+		color: #999;
+		font-family: Oswald;
+	}
 	h2{
-		color: scale-color(#fff, $lightness: -20%);
+		font-size: 24px;
+	}
+	nav{
+		padding: 0;
+		h1 {
+			color: #fafafa;
+			text-align: center;
+			font-family: Lobster;
+			font-size: 32px;
+		}
+	}
+
+	div {
+		padding: 0px 8px;
 	}
 }
 
@@ -64,8 +83,14 @@ body{
 
 .intro{
 	text-align: center;
-	h2{
-		color: scale-color(#fff, $lightness: -20%);	
-	}
-	
+}
+
+.button{
+	border-radius: 5px;
+	border: 1px solid #fafafa;
+}
+
+.button.active {
+	background: scale-color($coral, $lightness: 30%);
+	border: 1px solid #555;
 }

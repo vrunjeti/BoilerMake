@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="css/app.css" />
     <link rel="icon" href="../favicon2.ico" sizes="16x16 32x32 64x64 110x110 114x114 256x256" type="image/vnd.microsoft.icon">
     <script src="bower_components/modernizr/modernizr.js"></script>
+    <script src="https://cdn.firebase.com/js/client/1.1.2/firebase.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Lobster|Oswald' rel='stylesheet' type='text/css'>
+    <!-- <script src="https://js.braintreegateway.com/v2/braintree.js"></script> -->
+
   </head>
   <body>
     
@@ -16,92 +20,269 @@
 
     <div class="homepage">
       <div class="img">
-        <img src="img/logotransparent.png" height="80">
+        <img style="padding-bottom: 0px; margin-bottom: 0px" src="img/logo2.png" width="110">
       </div>
       
       <div class="intro">
-        <h2>Hi there!</h2>
-        <h2>I'll be your waiter today.</h2>
-        <br>
-        <h2>Let's learn your preferences first.</h2>
-        <a class="button" href="#">Go!</a>
+        <h1 style="padding-top:0px; margin-top: 0px">Hi there!</h1>
+        <h2 style="padding-bottom: 15px">I'll be your waiter today.</h2>
+        <h2 style="padding-bottom: 15px">Let's learn your preferences first.</h2>
+        <div id="introgo" class="button" href="#">Go!</div>
       </div>
     </div>
     
-    <div class="prefflavors">
-      <h2>Choose Your Favorite Flavors</h2>
+    <div class="prefflavors hide">
+      <h2 class="top">Choose Your Favorite Flavors</h2>
       
       <div class="row">
         <div class="column small-6">
-          <p class="button expand">Option 1</p>
+          <p id="spicy" class="button expand" type="checkbox" checked="unchecked" data-attribute="spicy" onclick="updateFlavor('spicy')">Spicy</p>
         </div>
         <div class="column small-6">
-          <p class="button expand">Option 2</p>
+          <p id="sweet" class="button expand" type="checkbox" checked="checked" data-attribute="sweet" onclick="updateFlavor('sweet')">Sweet</p>
         </div>
       </div>
 
       <div class="row">
         <div class="column small-6">
-          <p class="button expand">Option 3</p>
+          <p id="sour" class="button expand" type="checkbox" checked="checked" data-attribute="sour" onclick="updateFlavor('sour')">Sour</p>
         </div>
         <div class="column small-6">
-          <p class="button expand">Option 4</p>
+          <p id="salty" class="button expand" data-attribute="salty" onclick="updateFlavor('salty')">Salty</p>
         </div>
       </div>
 
       <div class="row">
         <div class="column small-6">
-          <p class="button expand">Option 5</p>
+          <p id="fruity" class="button expand" data-attribute="fruity" onclick="updateFlavor('fruity')">Fruity</p>
         </div>
         <div class="column small-6">
-          <p class="button expand">Option 6</p>
+          <p id="tart" class="button expand" data-attribute="tart" onclick="updateFlavor('tart')">Tart</p>
         </div>
       </div>
 
       <div class="row">
         <div class="column small-6">
-          <p class="button expand">Option 7</p>
+          <p id="bitter" class="button expand" data-attribute="bitter" onclick="updateFlavor('bitter')">Bitter</p>
         </div>
         <div class="column small-6">
-          <p class="button expand">Option 8</p>
+          <p id="buttery" class="button expand" data-attribute="buttery" onclick="updateFlavor('buttery')">Buttery</p>
         </div>
       </div>
 
       <div class="row">
         <div class="column small-6">
-          <p class="button expand">Option 9</p>
+          <p id="pickled" class="button expand" data-attribute="pickled" onclick="updateFlavor('pickled')">Pickled</p>
         </div>
         <div class="column small-6">
-          <p class="button expand">Option 10</p>
+          <p id="unseasoned" class="button expand" data-attribute="unseasoned" onclick="updateFlavor('unseasoned')">Unseasoned</p>
         </div>
       </div>
 
-      <img src="img/arrow.png" width="100">
+      <img id="flavorsnext" src="img/arrow2.png" width="50">
 
     </div>
 
-    <div class="prefallergies">
+    <div class="prefallergies hide">
+      <h2 class="top">What can't you eat?</h2>
+
+      <div class="row">
+        <div class="column small-6">
+          <p id="beef" onclick="updateAllergy('beef')" class="button expand" data-attribute="beef">Beef</p>
+        </div>
+        <div class="column small-6">
+          <p id="pork" onclick="updateAllergy('pork')" class="button expand" data-attribute="pork">Pork</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="column small-6">
+          <p id="chicken" onclick="updateAllergy('chicken')" class="button expand" data-attribute="chicken">Chicken</p>
+        </div>
+        <div class="column small-6">
+          <p id="fish" onclick="updateAllergy('fish')" class="button expand" data-attribute="fish">Fish</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="column small-6">
+          <p id="shellfish" onclick="updateAllergy('shellfish')" class="button expand" data-attribute="shellfish">Shellfish</p>
+        </div>
+        <div class="column small-6">
+          <p id="peanuts" onclick="updateAllergy('peanuts')" class="button expand" data-attribute="peanuts">Peanuts</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="column small-6">
+          <p id="treenuts" onclick="updateAllergy('treenuts')" class="button expand" data-attribute="treenuts">Tree Nuts</p>
+        </div>
+        <div class="column small-6">
+          <p id="milk" onclick="updateAllergy('milk')" class="button expand" data-attribute="milk">Milk</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="column small-6">
+          <p id="soy" onclick="updateAllergy('soy')" class="button expand" data-attribute="soy">Soy</p>
+        </div>
+        <div class="column small-6">
+          <p id="wheat" onclick="updateAllergy('wheat')" class="button expand" data-attribute="wheat">Wheat</p>
+        </div>
+      </div>
+
+      <img id="allergiesnext" src="img/arrow2.png" width="50">
+    </div>
+
+    <div class="health hide">
+      <h2 class="top">How important is eating healthy?</h2>
+
+      <div class="row">
+        <div class="column small-12">
+          <p class="button expand" data-attribute="important" onclick="updateHealthy(1)">Important</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="column small-12">
+          <p class="button expand" data-attribute="notimportant" onclick="updateHealthy(0)">Not Important</p>
+        </div>
+      </div>
+
+      <img id="healthnext" src="img/arrow2.png" width="50">
+    </div>
+
+    <div class="location hide">
+      <h2 class="top">Where are you?</h2>
       
+      <div class="column small-12">
+        <p class="button expand">WooChon</p>
+      </div>
+      <div class="column small-12">
+        <p class="button expand">Maize</p>
+      </div>
+      <div class="column small-12">
+        <p class="button expand">Spoon House</p>
+      </div>
+      <div class="column small-12">
+        <p class="button expand">Bangkok Thai</p>
+      </div>
+
+      <img id="locationnext" src="img/arrow2.png" width="50">
     </div>
     
-    <div class="rest1">
-      
+    <div class="welcome hide">
+      <h2 id="welc" class="top">Welcome to </h2>
+      <h2 style="padding: 0 0 10px">Choose selection option</h2>
+      <div class="column small-12">
+        <p id="auto" class="button expand" onclick="auto()" >Auto</p>
+      </div>
+      <div class="column small-12">
+        <p onclick="detailed()" id="detailed" class="button expand">Detailed</p>
+      </div>
+      <div class="column small-12">
+        <p id="trynew" class="button expand">Try New</p>
+      </div>
+
+      <img id="welcomenext" src="img/arrow2.png" width="50">
     </div>
 
-    <div class="rest2">
-      
+    <div class="rest1 hide">
+      <h2 class="top">Choose your food base</h2>
+
+      <div class="row">
+        <div class="column small-12">
+          <p class="button expand" data-attribute="meat">Meat</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="column small-12">
+          <p class="button expand" data-attribute="seafood">Seafood</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="column small-12">
+          <p class="button expand" data-attribute="vegetarian">Vegetarian</p>
+        </div>
+      </div>
+
+      <img id="rest1next" src="img/arrow2.png" width="50">
     </div>
 
-    <div class="rest3">
-      
+    <div class="rest2 hide">
+      <h2 class="top">Choose your food type</h2>
+
+      <div class="row">
+        <div class="column small-12">
+          <p class="button expand" data-attribute="noodles">Noodles</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="column small-12">
+          <p class="button expand" data-attribute="rice">Rice</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="column small-12">
+          <p class="button expand" data-attribute="stew">Stew</p>
+        </div>
+      </div>
+
+      <img id="rest2next" src="img/arrow2.png" width="50">
     </div>
 
-    <div class="rest4">
-      
+    <div class="rest3 hide">
+      <h2 class="top">Choose strength of flavor</h2>
+
+      <div class="row">
+        <div class="column small-12">
+          <p class="button expand" data-attribute="strong">Strong</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="column small-12">
+          <p class="button expand" data-attribute="mild">Mild</p>
+        </div>
+      </div>
+
+      <img id="rest3next" src="img/arrow2.png" width="50">
     </div>
 
+    <div class="result hide">
+      <h2 class="top">Here is my recommendation</h2>
+        <img src="img/logo2.png" width="100">
+        <h2 id="firstChoice"></h2>
+        <h2>Runner Ups:</h2>
+        <h2 id="secondChoice"></h2>
+        <h2 id="thirdChoice"></h2>      
+
+      <img id="resultnext" src="img/arrow2.png" width="50">
+    </div>
+
+    <div class="fin hide">
+      <h2 class="top">Order and Pay</h2>
+      
+    <script src="https://www.paypalobjects.com/js/external/paypal-button.min.js?merchant=munjeti2@illinois.edu" 
+          data-button="buynow" 
+          data-name="WaiterPlease" 
+          data-quantity="1" 
+          data-amount-editable="10.00" 
+          data-shipping="0" 
+          data-tax="0"
+              data-text="Pay"
+          data-env="sandbox">
+      </script>
+    
+    </div>
+    
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/foundation/js/foundation.min.js"></script>
     <script src="js/app.js"></script>
+
   </body>
 </html>
